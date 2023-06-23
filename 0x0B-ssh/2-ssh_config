@@ -1,0 +1,6 @@
+Host 2795-web-01
+    Hostname 34.138.206.129
+    User ubuntu
+    PubKeyAuthentication yes
+    IdentityFile ~/.ssh/holberton
+    PasswordAuthentication no
