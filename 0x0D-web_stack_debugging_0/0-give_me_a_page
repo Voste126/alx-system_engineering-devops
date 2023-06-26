@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Give me a page!
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
+service apache2 restart
