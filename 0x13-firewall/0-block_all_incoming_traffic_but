@@ -1,0 +1,8 @@
+apt update -y
+apt install ufw -y
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp
+ufw allow http
+ufw allow https
+ufw enable
