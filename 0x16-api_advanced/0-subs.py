@@ -3,7 +3,7 @@
 Module contains function 'number_of_subscribers'
 Query Reddit API and return number of subscribers.
 """
-
+#!/usr/bin/python3
 import requests
 
 def number_of_subscribers(subreddit):
@@ -18,7 +18,7 @@ def number_of_subscribers(subreddit):
     """
     
     # Set a custom User-Agent to avoid being blocked by Reddit
-    headers = {'User-Agent': 'My Reddit API Client'}
+    headers = {'User-Agent': 'My Reddit API Client by /u/Plane_Ordinary_2613'}
     
     # Construct the API URL
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
