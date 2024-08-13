@@ -11,7 +11,7 @@ def recurse(subreddit, hot_list=[], after=None):
     If no results are found for the given subreddit, return None.
     """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    headers = {"User-Agent": "python3:reddit.hot.articles:v1.0.0 (by /u/your_username)"}
+    headers = {"User-Agent": "python3:reddit.hot.articles:v1.0.0 (by /u/Plane_Ordinary_2613)"}
     params = {"limit": 100}
     if after:
         params["after"] = after
