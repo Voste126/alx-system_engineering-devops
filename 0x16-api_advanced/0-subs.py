@@ -6,16 +6,20 @@ Query Reddit API and return number of subscribers.
 
 import requests
 
+
 def number_of_subscribers(subreddit):
+    """
+    Query Reddit API and return number of subscribers.
+    If invalid subreddit given, return 0;
+    """
+
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {'User-Agent': 'Mozilla/5.0'}
-    response = requests.get(url, headers=headers)
-    
-    if response.status_code == 200:
-        try:
-            data = response.json()
-            return data['data']['subscribers']
-        except (KeyError, ValueError):
-            return 0
-    else:
+    header = {"User-Agent": "Plane_Ordinary_2613"}
+    response = requests.get(url, headers=header, allow_redirects=False)
+
+    if response.status_code == 404:
         return 0
+    print(response)
+    json = response.json()
+    # print(json)
+    return json.get('data').get('subscribers')
