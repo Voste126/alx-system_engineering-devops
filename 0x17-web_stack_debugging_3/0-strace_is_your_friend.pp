@@ -1,8 +1,5 @@
 # A puppet manuscript to replace a line in a file on a server
 
-$file_to_edit = '/var/www/html/wp-settings.php'
-
-exec { 'replace_line':
-  command => "sed -i 's/phpp/php/g' ${file_to_edit}",
-  path    => ['/bin','/usr/bin']
+exec { 'fix-wordpress':
+  command => '/usr/bin/touch /var/www/html/wp-content/themes/twentyseventeen/assets/images/header.jpg',
 }
